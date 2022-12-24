@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Namaste React</title>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
 
@@ -25,24 +26,46 @@
 
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>      
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>   
     
+
+
+
+   <!-- DIV H1 structure with mutltiple children -->
+<!--     
     <script>
 
-        const heading = React.createElement("h1",
+        
+const heading = React.createElement("h1",
         {
             id:"title",
-        } ,"Namaste Everyone!!!!")
+        } ,"Heading 1");
+
+        const heading2 = React.createElement("h2",
+        {
+            id:"title",
+        } ,"Heading 2")
+
+        const container = React.createElement("div",{
+            id:"container"
+        },[heading , heading2])
         
         console.log(heading);               //element will load up as an object
         
         const root = ReactDOM.createRoot(document.getElementById("root"));
         
-        root.render(heading);
+        root.render(container);
         
-        // document.getElementById("root").innerHTML = "hii"
-    </script>
+        document.getElementById("root").innerHTML = "hii"
+   
 
+    </script> -->
+
+
+
+
+    
+    <script src="App.js"></script>
     
     
     
