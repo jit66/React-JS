@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Namaste React</title>
 </head>
 <body>
-    <div id="root">
 
-        <!-- <h1>!!Namaste Everyone!!</h1> -->
+    <!-- <div id="header"><h1>Header</h1></div>   //this will show up--> 
 
-    </div>
+
+    <!-- <div id="root">
+        <h1 id="title">Hiii</h1>
+        <h1 id="title">Hiii</h1>    //wont show up below react heading because react overrides it-->
+        <!-- <h1 id="title">Hiii</h1>
+        <h1 id="title">Hiii</h1>
+    </div> --> 
+    
+    
+    <!-- <div id="footer"><h1>Footer</h1></div>   //this will show up-->
+    
+    <div id="root">Not rendered</div> <!--not rendered will show for millisec on refresh-->
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>      
+    
     <script>
 
-      const heading = document.createElement("h1");
-
-      heading.innerHTML = "Namaste React from JS!!"
-
-      const root =  document.getElementById("root");
-
-      root.appendChild(heading);
-
+        const heading = React.createElement("h1",
+        {
+            id:"title",
+        } ,"Namaste Everyone!!!!")
+        
+        console.log(heading);               //element will load up as an object
+        
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        
+        root.render(heading);
+        
+        // document.getElementById("root").innerHTML = "hii"
     </script>
 
+    
+    
+    
 </body>
 </html>
