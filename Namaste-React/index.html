@@ -8,66 +8,10 @@
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-
-    <!-- <div id="header"><h1>Header</h1></div>   //this will show up--> 
-
-
-    <!-- <div id="root">
-        <h1 id="title">Hiii</h1>
-        <h1 id="title">Hiii</h1>    //wont show up below react heading because react overrides it-->
-        <!-- <h1 id="title">Hiii</h1>
-        <h1 id="title">Hiii</h1>
-    </div> --> 
-    
-    
-    <!-- <div id="footer"><h1>Footer</h1></div>   //this will show up-->
     
     <div id="root">Not rendered</div> <!--not rendered will show for millisec on refresh-->
-
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>   
-    
-
-
-
-   <!-- DIV H1 structure with mutltiple children -->
-<!--     
-    <script>
-
-        
-const heading = React.createElement("h1",
-        {
-            id:"title",
-        } ,"Heading 1");
-
-        const heading2 = React.createElement("h2",
-        {
-            id:"title",
-        } ,"Heading 2")
-
-        const container = React.createElement("div",{
-            id:"container"
-        },[heading , heading2])
-        
-        console.log(heading);               //element will load up as an object
-        
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        
-        root.render(container);
-        
-        document.getElementById("root").innerHTML = "hii"
-   
-
-    </script> -->
-
-
-
-
-    
-    <script src="App.js"></script>
-    
-    
+    <script type="module" src="App.js"></script>
     
 </body>
 </html>
