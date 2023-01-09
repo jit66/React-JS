@@ -1,3 +1,30 @@
-#container{
-    background-color: aqua;
+.header {
+
+    display: flex ;
+    background-color: #232f3e;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-bottom: 5px;
+
+}
+
+ .logo{
+
+    padding-left: 25px;
+    padding-top: 10px;
+    border-radius: 5px;
+    padding-bottom: 5px;
+
+} 
+
+.icon{
+
+    padding-right: 25px;
+    padding-top: 2px;
+    border-radius: 5px;
+}    
+
+.search-container{
+
+    padding-top: 10px;
 }
