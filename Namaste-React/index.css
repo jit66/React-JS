@@ -4,7 +4,7 @@
     justify-content: space-between;
     border: 1px solid black;
     border-radius: 10px ;
-    background-color: orange;
+    background-color: rgb(160, 166, 77);
 
 }
 
@@ -31,13 +31,17 @@
 
 .card{
     
-    border: 1px solid rgba(0, 0, 0, 0.796);
+    /* border: 1px solid rgba(0, 0, 0, 0.796);
     margin: 25px;
     padding:10px;
     width: 10%;
     border-radius: 5px;
-    background-color:orange ;
-   
+    background-color:rgb(185, 183, 180) ; */
+
+   width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
 
 .card > img{
@@ -62,4 +66,17 @@
 
     display: flex;
     flex-wrap: wrap;
+}
+
+.shimmer-card{
+
+    width:200px ;
+    height: 200px;
+    background-color: lightgrey;
+    margin:20px ;
+}
+
+.menu-card{
+
+    display: flex;
 }
