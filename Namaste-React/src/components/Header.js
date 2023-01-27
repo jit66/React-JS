@@ -19,10 +19,10 @@ const Header = () => {
   const [ isloggedIn, setisLoggedIn]= useState(false);
 
   useEffect(()=>{
-    console.log('use effect')
+    // console.log('use effect')
   })
 
-  console.log("render")
+  // console.log("render")
 
    return (
      <div className="header">
