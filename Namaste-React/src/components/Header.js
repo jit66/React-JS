@@ -5,7 +5,7 @@ import useOnline from "../utils/useOnline";
 
 export const Title = () => (
   <a href="/">
-    <img className="logo" alt="logo" src={Logo} />
+    <img className="h-20 p-2 rounded-xl" alt="logo" src={Logo} />
   </a>
 );
 
@@ -21,22 +21,23 @@ const Header = () => {
   // console.log("render")
 
   return (
-    <div className="header">
+    <div className="h-20 m-2  flex justify-between rounded-xl bg-pink-100 shadow-lg md:bg-orange-500">
+
       <Title />
-      <h1>{title}</h1>
+      {/* <h1>{title}</h1> */}
       <div className="nav-items">
-        <ul>
-          <li>
+        <ul className="flex py-7">
+          <li className="px-2">
             <Link to="/">Home</Link>
           </li>
           <Link to="/about">
-            <li>About</li>
+            <li className="px-2">About</li>
           </Link>
-          <li>
+          <li className="px-2">
             <Link to="/contact">Contact</Link>
           </li>
-          <li>Cart</li>
-          <li>
+          <li className="px-2">Cart</li>
+          <li className="px-2">
             <Link to="/instamart">Instamart</Link>
           </li>
         </ul>

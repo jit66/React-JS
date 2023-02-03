@@ -18,23 +18,23 @@ const RestaurantMenu = () => {
 
     return (!restaurant) ? <Shimmer/> :
     (
-       <div className="menu-card">
+       <div className="flex">
 
-        <div>
+        <div className="border p-2 m-2 bg-slate-400">
+            <img className="w-32 h-32 p-2 m-2 border" width="20%" src={IMG_CDN + restaurant?.cloudinaryImageId}/>
             <h1>Restaurant id: {resId}</h1>
             <h2>{restaurant?.name}</h2>
-            <img width="20%" src={IMG_CDN + restaurant?.cloudinaryImageId}/>
             <h3>{restaurant?.area}</h3>
             <h3>{restaurant?.city}</h3>
             <h3>{restaurant?.avgRating} stars</h3>
             <h3>{restaurant?.costForTwo}</h3>
             <h3>{restaurant?.totalRatings}</h3>
         </div>
-        <div>
-            <h1>Menu</h1>
-            <ul>{
+        <div className=" pl-2 mx-15 bg-orange-300"> 
+            <h1 className="font-bold text-slate-800 p-2">Menu</h1>
+            <ul className="text-lg border">{
                 (Object.values(restaurant?.menu?.items).map((item)=>
-                    <li key={item?.id}>{item?.name}</li>
+                    <li className="p-2" key={item?.id}>{item?.name}</li>
                 ))
                 }
             </ul>
