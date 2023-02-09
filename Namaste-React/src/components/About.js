@@ -2,6 +2,7 @@
 // import Profile from "./ProfileClass";
 import ProfileFunc from "./Profile"
 import { Component } from "react";
+import UserContext from "../utils/UserContext";
 
 class About extends Component{
   constructor(props){
@@ -21,6 +22,11 @@ class About extends Component{
     return(
       <div>
        <h1>About Us Page</h1>
+
+       <UserContext.Consumer>
+        {({user})=><h4 className="p-4 m-4 font-bold">{user.name}-{user.email}</h4>}
+       </UserContext.Consumer>
+
        <p>Finding the path for about</p>
        {/* <Outlet/> */}
        {/* <ProfileFunc name={"Jeet"}/> */}

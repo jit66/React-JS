@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import Logo from "../assets/images/FoodVilla.jpg";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/UserContext"
 
 export const Title = () => (
   <a href="/">
@@ -13,6 +14,8 @@ const Header = () => {
   const [title, setTitle] = useState("Food Villa");
   const [isloggedIn, setisLoggedIn] = useState(false);
   const isOnline = useOnline();
+
+  const {user} = useContext(UserContext);
 
   useEffect(() => {
     // console.log('use effect')
@@ -44,6 +47,7 @@ const Header = () => {
       </div>
 
       <h1>{isOnline ? "🟢" : "🔴"}</h1>
+      <span className="p-2 m-2 font-bold">{user.name}</span>
       {isloggedIn ? (
         <button onClick={() => setisLoggedIn(false)}>Logout</button>
       ) : (
